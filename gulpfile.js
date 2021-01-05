@@ -30,6 +30,7 @@ gulp.task('css', function(){
     'node_modules/normalize.css/normalize.css',
     'node_modules/slick-carousel/slick/slick.css',
     'node_modules/magnific-popup/dist/magnific-popup.css',
+    'node_modules/rateyo/dist/jquery.rateyo.min.css'
   ])
     .pipe(concat('_libs.scss'))
     .pipe(cssmin())
@@ -49,8 +50,10 @@ gulp.task('script', function(){
 
 gulp.task('js', function(){
   return gulp.src([
-    'node_modules/slick-carousel/slick/slick.js',
-    'node_modules//magnific-popup/dist/jquery.magnific-popup.js'
+    'node_modules/slick-carousel/slick/slick.js',    
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+    'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/rateyo/dist/jquery.rateyo.min.js'    
   ])
     .pipe(concat('libs.min.js')) /* объеденяет файлы js в один */
     .pipe(uglify()) /*минифицирует их */
